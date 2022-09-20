@@ -1,0 +1,88 @@
+.btn-cart {
+  width: 150px;
+  height: 30px;
+  text-decoration: none;
+  color: #a675b3;
+  text-align: center;
+  line-height: 20px;
+  display: block;
+  margin: 20px auto;
+  font: normal 17px arial;
+}
+.btn-cart:not(.active) {
+  box-shadow: inset 0 1px 1px rgba(111, 55, 125, 0.8), inset 0 -1px 0px rgba(63, 59, 113, 0.2), 0 9px 16px 0 rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #150a1e;
+  background-image: linear-gradient(#3b2751, #271739);
+  text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 -1px 0 #311d47;
+}
+
+.btn-cart:not(.active):hover,
+.btn-cart:not(.active):focus {
+  transition: color 200ms linear, text-shadow 500ms linear;
+  color: #fff;
+  text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c;
+}
+.btn-cart:not(:hover) {
+  transition: 0.6s;
+}
+
+.products {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .product-item {
+    border-style: solid;
+    border-color: #a675b3;
+    width: 320px;
+    margin: 10px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .imgProduct {
+      width: 320px;
+    }
+    .buy-btn {
+      width: 100px;
+      height: 25px;
+      text-decoration: none;
+      color: #a675b3;
+      text-align: center;
+      display: block;
+      margin: 20px auto;
+      font: normal 17px arial;
+    }
+    .buy-btn:not(.active) {
+      box-shadow: inset 0 1px 1px rgba(111, 55, 125, 0.8), inset 0 -1px 0px rgba(63, 59, 113, 0.2), 0 9px 16px 0 rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #150a1e;
+      background-image: linear-gradient(#3b2751, #271739);
+      text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 -1px 0 #311d47;
+    }
+
+    .buy-btn:not(.active):hover,
+    .buy-btn:not(.active):focus {
+      transition: color 200ms linear, text-shadow 500ms linear;
+      color: #fff;
+      text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c;
+    }
+    .buy-btn:not(:hover) {
+      transition: 0.6s;
+    }
+    .titleProduct {
+      font-weight: bolder;
+      color: #280654;
+      text-align: center;
+      background-color: #a675b3;
+    }
+    .priceProduct {
+      font-weight: bolder;
+      color: #280654;
+      text-align: center;
+      background-color: #a675b3;
+    }
+
+  }
+}
+
+
+
