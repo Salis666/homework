@@ -13,30 +13,33 @@
   <div class="sizeGamburgerBox">
     <h3 class="textStyle">Размер гамбургера</h3>
     <div>
-      <p class="textStyle"><input class="styleRadioButton" name="size" type="radio" value="bigGam">Большой</p>
-      <p class="textStyle"><input class="styleRadioButton" name="size" type="radio" value="smallGam">Маленький</p>
+      <p class="textStyle"><input class="styleRadioButton sizeBurger" name="size" type="radio" value="bigGam 100 40">Большой 100р 40Кк</p>
+      <p class="textStyle"><input class="styleRadioButton sizeBurger" name="size" type="radio" value="smallGam 50 20">Маленький 50р 20Кк</p>
     </div>
   </div>
   <div class="fillingGamburgerBox">
     <h3 class="textStyle">Начинка</h3>
     <div>
-      <p class="textStyle"><input class="styleRadioButton" name="filling" type="radio" value="cheese">Сырная начинка</p>
-      <p class="textStyle"><input class="styleRadioButton" name="filling" type="radio" value="salad">Салатная начинка</p>
-      <p class="textStyle"><input class="styleRadioButton" name="filling" type="radio" value="potato">Картофельная начинка</p>
+      <p class="textStyle"><input class="styleRadioButton fillingBurger" name="filling" type="radio" value="cheese 10 20">Сырная 10р 20Кк</p>
+      <p class="textStyle"><input class="styleRadioButton fillingBurger" name="filling" type="radio" value="salad 20 5">Салатная 20р 5Кк</p>
+      <p class="textStyle"><input class="styleRadioButton fillingBurger" name="filling" type="radio" value="potato 15 10">Картофельна 15р 10Кк</p>
     </div>
   </div>
   <div class="additionGamburgerBox">
     <h3 class="textStyle">Допы</h3>
     <div>
-      <p class="textStyle"><input class="styleCheckboxButton" name="addition" type="checkbox" value="spice">Специи</p>
-      <p class="textStyle"><input class="styleCheckboxButton" name="addition" type="checkbox" value="mayonnaise">Майонез</p>
+      <p class="textStyle"><input class="styleCheckboxButton additionBurgerSpice" name="addition" type="checkbox" value="spice 15 0">Специи 15р 0Кк</p>
+      <p class="textStyle"><input class="styleCheckboxButton additionBurgerMayonnaise" name="addition" type="checkbox" value="mayonnaise 20 5">Майонез 20р 5Кк</p>
     </div>
   </div>
   <div class="resultGamburgerBox">
     <h3 class="textStyle">Ваш гамбургер</h3>
     <button class="gambResultButton">Рассчитать</button>
-    <div class="resultTextBox"></div>
+    <div class="resultTextBox">
+      <p class="textStyle resultText"></p>
+    </div>
   </div>
 </main>
+<script src="burgerScript.js"></script>
 </body>
 </html>

@@ -98,6 +98,12 @@ main {
       -webkit-transform: translate(0, 4px);
       transform: translate(0, 4px);
     }
+    .resultTextBox {
+      width: 300px;
+      .resultText {
+        text-align: center;
+      }
+    }
   }
 }
 

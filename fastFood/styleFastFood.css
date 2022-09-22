@@ -77,5 +77,9 @@ main {
       box-shadow: 0 2px #562606, 0 1px 6px rgba(0, 0, 0, 0.4), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
       -webkit-transform: translate(0, 4px);
       transform: translate(0, 4px); }
+    main .resultGamburgerBox .resultTextBox {
+      width: 300px; }
+      main .resultGamburgerBox .resultTextBox .resultText {
+        text-align: center; }
 
 /*# sourceMappingURL=styleFastFood.css.map */
