@@ -46,4 +46,30 @@ class ProductItem{
     }
 }
 
+class ElementCart extends ProductItem {
+    constructor() {
+        super (title, id, price, img);
+        this.quantity = quantity;
+    }
+
+    addProduct () {}
+    outProduct (){}
+}
+
+class ProductCart {
+    constructor(product) {
+        this.productCartList = productCartList;
+        this.totalPrice = this.getTotalPrice();
+    }
+    payAllProducts () {}
+    clearCart () {}
+    getTotalPrice () { //Метод подсчета общей стоимости корзины
+        let sum = 0;
+        this.productCartList.forEach((item) => {
+            sum += (item.price * item.quantity);
+        });
+        return sum;
+    }
+}
+
 let list = new ProductList();
