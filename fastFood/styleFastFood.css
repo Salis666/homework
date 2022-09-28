@@ -1,0 +1,85 @@
+body {
+  margin: 0; }
+
+header {
+  background-color: #6a3a1a;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+  header .headerText {
+    color: greenyellow;
+    text-align: center;
+    font-size: xxx-large; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  main .textStyle {
+    color: #a6dc5e;
+    font-size: x-large; }
+  main .sizeGamburgerBox {
+    background-color: #a46738;
+    margin: 20px 0 20px 0;
+    border-style: solid;
+    border-color: #6a3a1a;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  main .fillingGamburgerBox {
+    background-color: #a46738;
+    margin: 20px 0 20px 0;
+    border-style: solid;
+    border-color: #6a3a1a;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  main .additionGamburgerBox {
+    background-color: #a46738;
+    margin: 20px 0 20px 0;
+    border-style: solid;
+    border-color: #6a3a1a;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  main .resultGamburgerBox {
+    background-color: #a46738;
+    margin: 20px 0 20px 0;
+    border-style: solid;
+    border-color: #6a3a1a;
+    width: 500px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    main .resultGamburgerBox .gambResultButton {
+      display: inline-block;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
+      user-select: none;
+      padding: .7em 1.5em;
+      border: 1px solid #502000;
+      border-radius: 5px;
+      outline: none;
+      background: #935024 linear-gradient(#6a3a1a, #935024 80%);
+      box-shadow: 0 6px #562606, 0 3px 15px rgba(0, 0, 0, 0.4), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+      transition: .2s; }
+    main .resultGamburgerBox .gambResultButton:hover {
+      background: #a75b29 linear-gradient(#7e451f, #a75b29 80%); }
+    main .resultGamburgerBox .gambResultButton:active {
+      background: #783f19 linear-gradient(#783f19 20%, #a75b29);
+      box-shadow: 0 2px #562606, 0 1px 6px rgba(0, 0, 0, 0.4), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+      -webkit-transform: translate(0, 4px);
+      transform: translate(0, 4px); }
+    main .resultGamburgerBox .resultTextBox {
+      width: 300px; }
+      main .resultGamburgerBox .resultTextBox .resultText {
+        text-align: center; }
+
+/*# sourceMappingURL=styleFastFood.css.map */
