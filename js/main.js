@@ -1,75 +1,85 @@
-class ProductList{
-    constructor(container='.products'){
+const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
+
+// let getRequest = (url, cb) => {
+//     let xhr = new XMLHttpRequest();
+//     // window.ActiveXObject -> xhr = new ActiveXObject()
+//     xhr.open("GET", url, true);
+//     xhr.onreadystatechange = () => {
+//         if(xhr.readyState === 4){
+//             if(xhr.status !== 200){
+//                 console.log('Error');
+//             } else {
+//                 cb(xhr.responseText);
+//             }
+//         }
+//     };
+//     xhr.send();
+// };
+
+class ProductsList {
+    constructor(container = '.products'){
         this.container = container;
-        this.goods = [];
-        this._fetchProducts();//рекомендация, чтобы метод был вызван в текущем классе
-        this.render();//вывод товаров на страницу
+        this.goods = [];//массив товаров из JSON документа
+        this._getProducts()
+            .then(data => { //data - объект js
+                this.goods = data;
+//                 console.log(data);
+                this.render()
+            });
     }
+    // _fetchProducts(cb){
+    //     getRequest(`${API}/catalogData.json`, (data) => {
+    //         this.goods = JSON.parse(data);
+    //         console.log(this.goods);
+    //         cb();
+    //     })
+    // }
+    _getProducts(){
 
+        return fetch(`${API}/catalogData.json`)
+            .then(result => result.json())
+            .catch(error => {
+                console.log(error);
+            });
 
-
-    _fetchProducts(){
-        this.goods = [
-            {id: 1, title: 'Notebook', price: 2000, img: 'pic/notebook.jpg'},
-            {id: 2, title: 'Mouse', price: 20, img: 'pic/mouse.jpg'},
-            {id: 3, title: 'Keyboard', price: 200, img: 'pic/keyboard.jpg'},
-            {id: 4, title: 'Gamepad', price: 50, img: 'pic/gamepad.jpg'},
-        ];
     }
-
+    calcSum(){
+        return this.allProducts.reduce((accum, item) => accum += item.price, 0);
+    }
     render(){
         const block = document.querySelector(this.container);
-        for(let product of this.goods){
-            const item = new ProductItem(product);
-            block.insertAdjacentHTML("beforeend",item.render());
-//              block.innerHTML += item.render();
+        for (let product of this.goods){
+            const productObj = new ProductItem(product);
+//            this.allProducts.push(productObj);
+            block.insertAdjacentHTML('beforeend', productObj.render());
         }
+
     }
 }
 
-class ProductItem{
-    constructor(product){
-        this.title = product.title;
-        this.id = product.id;
+class ProductItem {
+    constructor(product, img = 'https://via.placeholder.com/200x150'){
+        this.title = product.product_name;
         this.price = product.price;
-        this.img = product.img;
+        this.id = product.id_product;
+        this.img = img;
     }
     render(){
         return `<div class="product-item">
                 <h3 class="titleProduct">${this.title}</h3>
-                <img class="imgProduct" src = ${this.img} alt="NOT IMG">
+                <img class="imgProduct" src = "${this.img}" alt="NOT IMG">
                 <div>
-                    <p class="priceProduct">${this.price}$</p>
+                    <p class="priceProduct">${this.price} р</p>
                     <button class="buy-btn">Купить</button>
                 </div>
             </div>`
     }
 }
 
-class ElementCart extends ProductItem {
-    constructor() {
-        super (title, id, price, img);
-        this.quantity = quantity;
-    }
-
-    addProduct () {}
-    outProduct (){}
+class BasketProducts {
+    
 }
 
-class ProductCart {
-    constructor(product) {
-        this.productCartList = productCartList;
-        this.totalPrice = this.getTotalPrice();
-    }
-    payAllProducts () {}
-    clearCart () {}
-    getTotalPrice () { //Метод подсчета общей стоимости корзины
-        let sum = 0;
-        this.productCartList.forEach((item) => {
-            sum += (item.price * item.quantity);
-        });
-        return sum;
-    }
-}
 
-let list = new ProductList();
+
+let list = new ProductsList();
